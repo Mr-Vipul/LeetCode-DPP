@@ -2,7 +2,9 @@
 
 def usingBinarySearch(arr):
     n = len(arr)
-    
+    """Time Complexity is O(n*logn)
+       Space Complexity is O(1)"""
+    arr.sort()
     for i in range(len(arr)):
         tar = 2*arr[i]
         right = len(arr)-1
@@ -17,6 +19,11 @@ def usingBinarySearch(arr):
                 right = mid-1
     
     return False
+
+
+def usingHashSet(arr):
+    seen = set()
+    
 
 arr = [0,0]
 print(usingBinarySearch(arr))
