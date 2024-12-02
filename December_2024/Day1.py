@@ -22,9 +22,17 @@ def usingBinarySearch(arr):
 
 
 def usingHashSet(arr):
+    """ T.C is O(n)
+        S.C is O(n) """
     seen = set()
+    for n in arr:
+        if 2*n in seen or n//2 in seen:
+            return True 
+        seen.add(n)
+    return  False
     
 
 arr = [0,0]
-print(usingBinarySearch(arr))
+print("Using Binary Search ->",usingBinarySearch(arr))
+print("Using HashSet ->",usingHashSet(arr))
     
