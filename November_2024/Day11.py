@@ -1,3 +1,4 @@
+from collections import List 
 class Solution:
     def primeSubOperation(self, nums: List[int]) -> bool:
         maxVal = max(nums)
