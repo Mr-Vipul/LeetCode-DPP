@@ -3,7 +3,7 @@ def stringCheckNext(str, check):
     j = 0 
     
     while i<len(str) and j<len(check):
-        if str[i] == check[j] or chr(ord(str[i])+1)%26==check[j]:
+        if str[i] == check[j] or  (ord(str[i]) + 1 - ord('a'))%26 == ord(check[j]) - ord('a'):
             j+=1
         
         if j==len(check):
@@ -13,6 +13,6 @@ def stringCheckNext(str, check):
     return False
 
 
-str = "zb"
-check = "ac"
+str = "za"
+check = "ab"
 print(stringCheckNext(str,check))
